@@ -1,12 +1,14 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 
 function Container(props) {
   return (
-    < div className={"container py-md-5 " + (props.wide ? '' :'container--narrow')}>
-      {/* props.children cludes the code from other components to this code*/}
-      {props.children} 
+    //ternary operator used to add class if the props is included in the request
+
+    <div className={"container py-md-5 " + (props.wide ? " " : "container--narrow")}>
+      {/*props.children includes the code from other components that use the container component */}
+      { props.children } 
     </div>
   )
 }
 
-export default Container
+export default Container;
